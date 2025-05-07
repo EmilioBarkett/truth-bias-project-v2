@@ -132,8 +132,11 @@ def create_apa_table(results_list):
 # Example usage
 if __name__ == "__main__":
     # Study proportions
-    study1_o3 = 0.575
-    study1_claude = 0.795
+    study1_n_oa_r1 = 0.525
+    study1_n_tb_r1 = 0.925
+    study1_n_oa_v3 = 0.54
+    study1_n_tb_v3 = 0.6
+    study1_claude = 0.8334
     study2_o3 = 0.495
     study2_claude = 0.655
     study3_o3 = 0.565
@@ -141,14 +144,15 @@ if __name__ == "__main__":
     n1 = n2 = 200
 
     # Run analysis
-    results1 = analyze_proportion_comparison(study1_o3, study1_claude, n1, n2, "Study 1")
-    results2 = analyze_proportion_comparison(study2_o3, study2_claude, n1, n2, "Study 2")
-    results3 = analyze_proportion_comparison(study3_o3, study3_claude, n1, n2, "Study 3")
+    results1 = analyze_proportion_comparison(study1_n_oa_r1, study1_n_oa_v3, n1, n2, "Study 1")
+    results2 = analyze_proportion_comparison(study1_n_tb_r1, study1_n_tb_v3, n1, n2, "Study 1")
+    results3 = analyze_proportion_comparison(study2_o3, study2_claude, n1, n2, "Study 2")
+  #  results4 = analyze_proportion_comparison(study3_o3, study3_claude, n1, n2, "Study 3")
 
     # Print detailed results
     print_results(results1)
     print_results(results2)
-    print_results(results3)
+  #  print_results(results3)
 
     # APA table
     all_results = [results1, results2, results3]
