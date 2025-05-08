@@ -196,7 +196,7 @@ if __name__ == "__main__":
         analyze_proportion_comparison(study3_br_tb_37, study3_br_tb_35, n1, n2, "TB 37 vs TB 35"),
         analyze_proportion_comparison(study3_br_oa_r1, study3_br_oa_v3, n1, n2, "OA R1 vs OA V3"),
         analyze_proportion_comparison(study3_br_tb_r1, study3_br_tb_v3, n1, n2, "TB R1 vs TB V3"),
-    ]
+    ] 
 
     for r in results:
         print_results(r)
