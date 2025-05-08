@@ -132,30 +132,81 @@ def create_apa_table(results_list):
 # Example usage
 if __name__ == "__main__":
     # Study proportions
-    study1_n_oa_r1 = 0.525
-    study1_n_tb_r1 = 0.925
-    study1_n_oa_v3 = 0.54
-    study1_n_tb_v3 = 0.6
-    study1_claude = 0.8334
-    study2_o3 = 0.495
-    study2_claude = 0.655
-    study3_o3 = 0.565
-    study3_claude = 0.555
+   # study1_n_oa_o3 = 0.525
+   # study1_n_tb_r1 = 0.925
+   # study1_n_oa_v3 = 0.54
+   # study1_n_tb_v3 = 0.6
+   # study1_claude = 0.8334
+   # study2_v_oa_o3 = 0.745
+   # study2_v_oa_41 = 0.55
+   # study2_v_tb_o3 = 0.495
+   # study2_v_tb_41 = 0.93
+   # study2_v_oa_37 = 0.595
+   # study2_v_oa_35 = 0.585
+   # study2_v_tb_37 = 0.29
+   # study2_v_tb_35 = 0.655
+   # study2_v_oa_r1 = 0.61
+   # study2_v_oa_v3 = 0.505
+   # study2_v_tb_r1 = 0.69
+   # study2_v_tb_v3 = 0.535
+    study3_br_oa_o3 = 0.67
+    study3_br_oa_41 = 0.62
+    study3_br_tb_o3 = 0.565
+    study3_br_tb_41 = 0.85
+    study3_br_oa_37 = 0.63
+    study3_br_oa_35 = 0.555
+    study3_br_tb_37 = 0.39
+    study3_br_tb_35 = 0.555
+    study3_br_oa_r1 = 0.565
+    study3_br_oa_v3 = 0.525
+    study3_br_tb_r1 = 0.745
+    study3_br_tb_v3 = 0.525
+   # study2_claude = 0.655
+   # study2_o3 = 0.495
+   # study2_claude = 0.655
+   # study2_o3 = 0.495
+   # study2_claude = 0.655
+   # study3_o3 = 0.565
+   # study3_claude = 0.555
     n1 = n2 = 200
 
     # Run analysis
-    results1 = analyze_proportion_comparison(study1_n_oa_r1, study1_n_oa_v3, n1, n2, "Study 1")
-    results2 = analyze_proportion_comparison(study1_n_tb_r1, study1_n_tb_v3, n1, n2, "Study 1")
-    results3 = analyze_proportion_comparison(study2_o3, study2_claude, n1, n2, "Study 2")
+  #  results1 = analyze_proportion_comparison(study1_n_oa_r1, study1_n_oa_v3, n1, n2, "Study 1")
+  #  results2 = analyze_proportion_comparison(study2_v_oa_o3, study2_v_oa_41, n1, n2, "Study 2")
+  #  results3 = analyze_proportion_comparison(study2_v_tb_o3, study2_v_tb_41, n1, n2, "Study 2")
+  #  results4 = analyze_proportion_comparison(study2_v_oa_37, study2_v_oa_35, n1, n2, "Study 2")
+  #  results5 = analyze_proportion_comparison(study2_v_tb_37, study2_v_tb_35, n1, n2, "Study 2")
+  #  results6 = analyze_proportion_comparison(study2_v_oa_r1, study2_v_oa_v3, n1, n2, "Study 2")
+  #  results7 = analyze_proportion_comparison(study2_v_tb_r1, study2_v_tb_v3, n1, n2, "Study 2")
+  #  results2 = analyze_proportion_comparison(study1_n_tb_r1, study1_n_tb_v3, n1, n2, "Study 1")
+    results8 = analyze_proportion_comparison(study3_br_oa_o3, study3_br_oa_41, n1, n2, "Study 3")
+    results9 = analyze_proportion_comparison(study3_br_tb_o3, study3_br_tb_41, n1, n2, "Study 3")
+    results10 = analyze_proportion_comparison(study3_br_oa_37, study3_br_oa_35, n1, n2, "Study 3")
+    results11 = analyze_proportion_comparison(study3_br_tb_37, study3_br_tb_35, n1, n2, "Study 3")
+    results12 = analyze_proportion_comparison(study3_br_oa_r1, study3_br_oa_v3, n1, n2, "Study 3")
+    results13 = analyze_proportion_comparison(study3_br_tb_r1, study3_br_tb_v3, n1, n2, "Study 3")
+  #  results3 = analyze_proportion_comparison(study2_o3, study2_claude, n1, n2, "Study 2")
   #  results4 = analyze_proportion_comparison(study3_o3, study3_claude, n1, n2, "Study 3")
 
     # Print detailed results
-    print_results(results1)
-    print_results(results2)
-  #  print_results(results3)
+    results = [
+        analyze_proportion_comparison(study3_br_oa_o3, study3_br_oa_41, n1, n2, "OA O3 vs OA 41"),
+        analyze_proportion_comparison(study3_br_tb_o3, study3_br_tb_41, n1, n2, "TB O3 vs TB 41"),
+        analyze_proportion_comparison(study3_br_oa_37, study3_br_oa_35, n1, n2, "OA 37 vs OA 35"),
+        analyze_proportion_comparison(study3_br_tb_37, study3_br_tb_35, n1, n2, "TB 37 vs TB 35"),
+        analyze_proportion_comparison(study3_br_oa_r1, study3_br_oa_v3, n1, n2, "OA R1 vs OA V3"),
+        analyze_proportion_comparison(study3_br_tb_r1, study3_br_tb_v3, n1, n2, "TB R1 vs TB V3"),
+    ]
+
+    for r in results:
+        print_results(r)
+
+   # print_results(results1)
+   # print_results(results2, results3, results4, results5, results6, results7)
+   # print_results(results3)
 
     # APA table
-    all_results = [results1, results2, results3]
+    all_results = [results8, results9, results10, results11, results12, results13]
     apa_table = create_apa_table(all_results)
 
     print("\n--- APA-Style Results Table ---")
