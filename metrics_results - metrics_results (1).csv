@@ -5,10 +5,10 @@ Neutral,reasoning,OpenAI,o3,0.670,0.575
 ,non-reasoning,Anthropic,3.5 Haiku,0.625,0.795
 ,reasoning,DeepSeek,R1,0.525,0.925
 ,non-reasoning,DeepSeek,V3,0.540,0.600
-Veracity,reasoning,OpenAI,o3,0.745,0.575
+Veracity,reasoning,OpenAI,o3,0.745,0.495
 ,non-reasoning,OpenAI,4.1,0.550,0.930
 ,reasoning,Anthropic,3.7 Sonnet,0.595,0.290
-,non-reasoning,Anthropic,3.5 Haiku,0.625,0.795
+,non-reasoning,Anthropic,3.5 Haiku,0.585,0.655
 ,reasoning,DeepSeek,R1,0.610,0.690
 ,non-reasoning,DeepSeek,V3,0.505,0.535
 Base-Rate,reasoning,OpenAI,o3,0.670,0.565

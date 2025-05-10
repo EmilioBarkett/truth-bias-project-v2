@@ -246,7 +246,7 @@ if __name__ == "__main__":
             print(apa_table.to_string(index=False))
             
             # Save results to file
-            output_file = "proportion_comparison_results-v1.csv"
+            output_file = "proportion_comparison_results-v5.csv"
             apa_table.to_csv(output_file, index=False)
             print(f"\nResults saved to '{output_file}'")
             print(f"Full path: {os.path.join(os.getcwd(), output_file)}")
